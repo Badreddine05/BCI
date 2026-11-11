@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bci-neurolab"
+version = "1.0.0"
+description = "Reproducible, session-separated EEG motor-imagery evaluation"
+requires-python = ">=3.13"
+dependencies = ["numpy==2.4.4", "scipy==1.18.1", "scikit-learn==1.8.0"]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.2"]
+
+[project.scripts]
+bci-lab = "bci_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

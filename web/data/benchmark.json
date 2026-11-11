@@ -1,0 +1,1510 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-11T19:55:30.492009+00:00",
+  "protocol": {
+    "dataset": "BNCI2014-001 / BCI Competition IV 2a",
+    "train_session": "T",
+    "test_session": "E",
+    "sampling_rate_hz": 250,
+    "epoch_seconds": [
+      2,
+      6
+    ],
+    "epoch_end_exclusive": true,
+    "eeg_channels": [
+      "Fz",
+      "FC3",
+      "FC1",
+      "FCz",
+      "FC2",
+      "FC4",
+      "C5",
+      "C3",
+      "C1",
+      "Cz",
+      "C2",
+      "C4",
+      "C6",
+      "CP3",
+      "CP1",
+      "CPz",
+      "CP2",
+      "CP4",
+      "P1",
+      "Pz",
+      "P2",
+      "POz"
+    ],
+    "eog_channels_used": false,
+    "classes": [
+      "left_hand",
+      "right_hand",
+      "feet",
+      "tongue"
+    ],
+    "bandpass_hz": [
+      8,
+      30
+    ],
+    "filter": "Butterworth order 4, zero phase per epoch (offline)",
+    "artifact_policy": "All labelled trials retained, including provider-flagged trials; counts disclosed.",
+    "csp": "One-versus-rest, two filters per class, covariance shrinkage 0.1",
+    "tuning": "Fixed choices; no hyperparameter search, no model selection on session E.",
+    "generalization": "New session of a known participant; not unseen-participant evaluation."
+  },
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "records": [
+    {
+      "subject": 1,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 1,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.6041666666666666,
+      "balanced_accuracy": 0.6041666666666666,
+      "kappa": 0.4722222222222222,
+      "confusion": [
+        [
+          30,
+          26,
+          10,
+          6
+        ],
+        [
+          25,
+          42,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          45,
+          24
+        ],
+        [
+          2,
+          0,
+          13,
+          57
+        ]
+      ]
+    },
+    {
+      "subject": 1,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.6597222222222222,
+      "balanced_accuracy": 0.6597222222222222,
+      "kappa": 0.5462962962962963,
+      "confusion": [
+        [
+          49,
+          16,
+          4,
+          3
+        ],
+        [
+          9,
+          55,
+          8,
+          0
+        ],
+        [
+          7,
+          1,
+          32,
+          32
+        ],
+        [
+          2,
+          0,
+          16,
+          54
+        ]
+      ]
+    },
+    {
+      "subject": 2,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 2,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.3611111111111111,
+      "balanced_accuracy": 0.3611111111111111,
+      "kappa": 0.14814814814814814,
+      "confusion": [
+        [
+          7,
+          38,
+          21,
+          6
+        ],
+        [
+          3,
+          45,
+          13,
+          11
+        ],
+        [
+          0,
+          26,
+          42,
+          4
+        ],
+        [
+          3,
+          38,
+          21,
+          10
+        ]
+      ]
+    },
+    {
+      "subject": 2,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.4583333333333333,
+      "balanced_accuracy": 0.45833333333333337,
+      "kappa": 0.2777777777777778,
+      "confusion": [
+        [
+          28,
+          16,
+          14,
+          14
+        ],
+        [
+          34,
+          15,
+          11,
+          12
+        ],
+        [
+          7,
+          2,
+          55,
+          8
+        ],
+        [
+          20,
+          5,
+          13,
+          34
+        ]
+      ]
+    },
+    {
+      "subject": 3,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 3,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.6423611111111112,
+      "balanced_accuracy": 0.6423611111111112,
+      "kappa": 0.5231481481481481,
+      "confusion": [
+        [
+          47,
+          15,
+          5,
+          5
+        ],
+        [
+          1,
+          65,
+          2,
+          4
+        ],
+        [
+          8,
+          16,
+          22,
+          26
+        ],
+        [
+          4,
+          7,
+          10,
+          51
+        ]
+      ]
+    },
+    {
+      "subject": 3,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.7083333333333334,
+      "balanced_accuracy": 0.7083333333333334,
+      "kappa": 0.6111111111111112,
+      "confusion": [
+        [
+          57,
+          6,
+          0,
+          9
+        ],
+        [
+          0,
+          69,
+          1,
+          2
+        ],
+        [
+          6,
+          9,
+          16,
+          41
+        ],
+        [
+          2,
+          3,
+          5,
+          62
+        ]
+      ]
+    },
+    {
+      "subject": 4,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 4,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.5277777777777778,
+      "balanced_accuracy": 0.5277777777777777,
+      "kappa": 0.37037037037037035,
+      "confusion": [
+        [
+          39,
+          21,
+          10,
+          2
+        ],
+        [
+          16,
+          36,
+          12,
+          8
+        ],
+        [
+          9,
+          2,
+          31,
+          30
+        ],
+        [
+          7,
+          7,
+          12,
+          46
+        ]
+      ]
+    },
+    {
+      "subject": 4,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.5416666666666666,
+      "balanced_accuracy": 0.5416666666666666,
+      "kappa": 0.38888888888888884,
+      "confusion": [
+        [
+          32,
+          25,
+          12,
+          3
+        ],
+        [
+          14,
+          46,
+          2,
+          10
+        ],
+        [
+          5,
+          5,
+          31,
+          31
+        ],
+        [
+          2,
+          10,
+          13,
+          47
+        ]
+      ]
+    },
+    {
+      "subject": 5,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 5,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.3090277777777778,
+      "balanced_accuracy": 0.30902777777777773,
+      "kappa": 0.07870370370370372,
+      "confusion": [
+        [
+          17,
+          36,
+          12,
+          7
+        ],
+        [
+          22,
+          25,
+          14,
+          11
+        ],
+        [
+          12,
+          29,
+          19,
+          12
+        ],
+        [
+          10,
+          14,
+          20,
+          28
+        ]
+      ]
+    },
+    {
+      "subject": 5,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.3402777777777778,
+      "balanced_accuracy": 0.34027777777777773,
+      "kappa": 0.12037037037037035,
+      "confusion": [
+        [
+          39,
+          17,
+          12,
+          4
+        ],
+        [
+          32,
+          24,
+          13,
+          3
+        ],
+        [
+          23,
+          22,
+          20,
+          7
+        ],
+        [
+          29,
+          13,
+          15,
+          15
+        ]
+      ]
+    },
+    {
+      "subject": 6,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 6,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.4479166666666667,
+      "balanced_accuracy": 0.44791666666666663,
+      "kappa": 0.26388888888888884,
+      "confusion": [
+        [
+          44,
+          18,
+          7,
+          3
+        ],
+        [
+          25,
+          38,
+          6,
+          3
+        ],
+        [
+          15,
+          26,
+          24,
+          7
+        ],
+        [
+          17,
+          25,
+          7,
+          23
+        ]
+      ]
+    },
+    {
+      "subject": 6,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.4479166666666667,
+      "balanced_accuracy": 0.4479166666666667,
+      "kappa": 0.26388888888888884,
+      "confusion": [
+        [
+          49,
+          13,
+          9,
+          1
+        ],
+        [
+          20,
+          31,
+          18,
+          3
+        ],
+        [
+          17,
+          10,
+          35,
+          10
+        ],
+        [
+          24,
+          16,
+          18,
+          14
+        ]
+      ]
+    },
+    {
+      "subject": 7,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 7,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.6423611111111112,
+      "balanced_accuracy": 0.6423611111111112,
+      "kappa": 0.5231481481481481,
+      "confusion": [
+        [
+          31,
+          19,
+          7,
+          15
+        ],
+        [
+          14,
+          44,
+          8,
+          6
+        ],
+        [
+          7,
+          2,
+          54,
+          9
+        ],
+        [
+          0,
+          6,
+          10,
+          56
+        ]
+      ]
+    },
+    {
+      "subject": 7,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.5694444444444444,
+      "balanced_accuracy": 0.5694444444444444,
+      "kappa": 0.42592592592592593,
+      "confusion": [
+        [
+          19,
+          21,
+          12,
+          20
+        ],
+        [
+          7,
+          41,
+          6,
+          18
+        ],
+        [
+          0,
+          2,
+          41,
+          29
+        ],
+        [
+          1,
+          2,
+          6,
+          63
+        ]
+      ]
+    },
+    {
+      "subject": 8,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 8,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.65625,
+      "balanced_accuracy": 0.65625,
+      "kappa": 0.5416666666666667,
+      "confusion": [
+        [
+          59,
+          2,
+          10,
+          1
+        ],
+        [
+          3,
+          57,
+          9,
+          3
+        ],
+        [
+          10,
+          14,
+          39,
+          9
+        ],
+        [
+          10,
+          20,
+          8,
+          34
+        ]
+      ]
+    },
+    {
+      "subject": 8,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.7291666666666666,
+      "balanced_accuracy": 0.7291666666666666,
+      "kappa": 0.6388888888888888,
+      "confusion": [
+        [
+          57,
+          2,
+          12,
+          1
+        ],
+        [
+          0,
+          59,
+          9,
+          4
+        ],
+        [
+          9,
+          10,
+          41,
+          12
+        ],
+        [
+          4,
+          8,
+          7,
+          53
+        ]
+      ]
+    },
+    {
+      "subject": 9,
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "kappa": 0.0,
+      "confusion": [
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ],
+        [
+          72,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "subject": 9,
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.6770833333333334,
+      "balanced_accuracy": 0.6770833333333334,
+      "kappa": 0.5694444444444444,
+      "confusion": [
+        [
+          60,
+          10,
+          0,
+          2
+        ],
+        [
+          2,
+          37,
+          20,
+          13
+        ],
+        [
+          2,
+          17,
+          35,
+          18
+        ],
+        [
+          0,
+          2,
+          7,
+          63
+        ]
+      ]
+    },
+    {
+      "subject": 9,
+      "model": "csp",
+      "name": "CSP + LDA",
+      "train_trials": 288,
+      "test_trials": 288,
+      "accuracy": 0.7708333333333334,
+      "balanced_accuracy": 0.7708333333333333,
+      "kappa": 0.6944444444444444,
+      "confusion": [
+        [
+          52,
+          18,
+          2,
+          0
+        ],
+        [
+          2,
+          45,
+          16,
+          9
+        ],
+        [
+          1,
+          6,
+          58,
+          7
+        ],
+        [
+          0,
+          2,
+          3,
+          67
+        ]
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "model": "baseline",
+      "name": "Classe majoritaire",
+      "subjects": 9,
+      "balanced_accuracy": 0.25,
+      "accuracy": 0.25,
+      "kappa": 0.0,
+      "subject_min": 0.25,
+      "subject_max": 0.25,
+      "confusion": [
+        [
+          648,
+          0,
+          0,
+          0
+        ],
+        [
+          648,
+          0,
+          0,
+          0
+        ],
+        [
+          648,
+          0,
+          0,
+          0
+        ],
+        [
+          648,
+          0,
+          0,
+          0
+        ]
+      ],
+      "train_trials": 2592,
+      "test_trials": 2592
+    },
+    {
+      "model": "bandpower",
+      "name": "Puissance spectrale + LDA",
+      "subjects": 9,
+      "balanced_accuracy": 0.540895061728395,
+      "accuracy": 0.540895061728395,
+      "kappa": 0.38786008230452673,
+      "subject_min": 0.30902777777777773,
+      "subject_max": 0.6770833333333334,
+      "confusion": [
+        [
+          334,
+          185,
+          82,
+          47
+        ],
+        [
+          111,
+          389,
+          88,
+          60
+        ],
+        [
+          66,
+          132,
+          311,
+          139
+        ],
+        [
+          53,
+          119,
+          108,
+          368
+        ]
+      ],
+      "train_trials": 2592,
+      "test_trials": 2592
+    },
+    {
+      "model": "csp",
+      "name": "CSP + LDA",
+      "subjects": 9,
+      "balanced_accuracy": 0.5806327160493826,
+      "accuracy": 0.5806327160493826,
+      "kappa": 0.44084362139917693,
+      "subject_min": 0.34027777777777773,
+      "subject_max": 0.7708333333333333,
+      "confusion": [
+        [
+          382,
+          134,
+          77,
+          55
+        ],
+        [
+          118,
+          385,
+          84,
+          61
+        ],
+        [
+          75,
+          67,
+          329,
+          177
+        ],
+        [
+          84,
+          59,
+          96,
+          409
+        ]
+      ],
+      "train_trials": 2592,
+      "test_trials": 2592
+    }
+  ],
+  "quality": [
+    {
+      "subject": 1,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 15,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 1,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 7,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 2,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 18,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 2,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 5,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 3,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 18,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 3,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 15,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 4,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 26,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 4,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 60,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 5,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 26,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 5,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 12,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 6,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 69,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 6,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 73,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 7,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 17,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 7,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 11,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 8,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 24,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 8,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 17,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 9,
+      "session": "T",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 51,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    },
+    {
+      "subject": 9,
+      "session": "E",
+      "trials": 288,
+      "runs": 6,
+      "flagged_trials": 24,
+      "class_counts": [
+        72,
+        72,
+        72,
+        72
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "file": "A01T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A01T.mat",
+      "bytes": 42806453,
+      "sha256": "054f02e70cf9c4ada1517e9b9864f45407939c1062c6793516585c6f511d0325"
+    },
+    {
+      "file": "A01E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A01E.mat",
+      "bytes": 43772146,
+      "sha256": "53d415f39c3d7b0c88b894d7b08d99bcdfe855ede63831d3691af1a45607fb62"
+    },
+    {
+      "file": "A02T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A02T.mat",
+      "bytes": 43068077,
+      "sha256": "5ddd5cb520b1692c3ba1363f48d98f58f0e46f3699ee50d749947950fc39db27"
+    },
+    {
+      "file": "A02E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A02E.mat",
+      "bytes": 44218409,
+      "sha256": "d63c454005d3a9b41d8440629482e855afc823339bdd0b5721842a7ee9cc7b12"
+    },
+    {
+      "file": "A03T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A03T.mat",
+      "bytes": 44057065,
+      "sha256": "7e731ee8b681d5da6ecb11ae1d4e64b1653c7f15aad5d6b7620b25ce53141e80"
+    },
+    {
+      "file": "A03E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A03E.mat",
+      "bytes": 42316292,
+      "sha256": "d4229267ec7624fa8bd3af5cbebac17f415f7c722de6cb676748f8cb3b717d97"
+    },
+    {
+      "file": "A04T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A04T.mat",
+      "bytes": 37150377,
+      "sha256": "15850d81b95fc88cc8b9589eb9b713d49fa071e28adaf32d675b3eaa30591d6e"
+    },
+    {
+      "file": "A04E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A04E.mat",
+      "bytes": 41730824,
+      "sha256": "81916dff2c12997974ba50ffc311da006ea66e525010d010765f0047e771c86a"
+    },
+    {
+      "file": "A05T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A05T.mat",
+      "bytes": 42452392,
+      "sha256": "77387d3b669f4ed9a7c1dac4dcba4c2c40c8910bae20fb961bb7cf5a94912950"
+    },
+    {
+      "file": "A05E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A05E.mat",
+      "bytes": 44392496,
+      "sha256": "8b357470865610c28b2f1d351beac247a56a856f02b2859d650736eb2ef77808"
+    },
+    {
+      "file": "A06T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A06T.mat",
+      "bytes": 44581256,
+      "sha256": "4dc3be1b0d60279134d1220323c73c68cf73799339a7fb224087a3c560a9a7e2"
+    },
+    {
+      "file": "A06E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A06E.mat",
+      "bytes": 43395510,
+      "sha256": "bf67a40621b74b6af7a986c2f6edfff7fc2bbbca237aadd07b575893032998d1"
+    },
+    {
+      "file": "A07T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A07T.mat",
+      "bytes": 42809746,
+      "sha256": "43b6bbef0be78f0ac2b66cb2d9679091f1f5b7f0a5d4ebef73d2c7cc8e11aa96"
+    },
+    {
+      "file": "A07E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A07E.mat",
+      "bytes": 42242294,
+      "sha256": "b9aaec73dcee002fab84ee98e938039a67bf6a3cbf4fc86d5d8df198cfe4c323"
+    },
+    {
+      "file": "A08T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A08T.mat",
+      "bytes": 45032065,
+      "sha256": "7a4b3bd602d5bc307d3f4527fca2cf076659e94aca584dd64f6286fd413a82f2"
+    },
+    {
+      "file": "A08E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A08E.mat",
+      "bytes": 46282127,
+      "sha256": "0eedbd89790c7d621c8eef68065ddecf80d437bbbcf60321d9253e2305f294f7"
+    },
+    {
+      "file": "A09T.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A09T.mat",
+      "bytes": 44785478,
+      "sha256": "b28d8a262c779c8cad9cc80ee6aa9c5691cfa6617c03befe490a090347ebd15c"
+    },
+    {
+      "file": "A09E.mat",
+      "url": "https://lampx.tugraz.at/~bci/database/001-2014/A09E.mat",
+      "bytes": 44780912,
+      "sha256": "5d79649a42df9d51215def8ffbdaf1c3f76c54b88b9bbaae721e8c6fd972cc36"
+    }
+  ],
+  "runtime": {
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0"
+  },
+  "data_license": "CC BY-ND 4.0; original recordings are downloaded from the licensor, not redistributed here.",
+  "source_page": "https://bnci-horizon-2020.eu/database/data-sets",
+  "publication": "https://doi.org/10.3389/fnins.2012.00055"
+}
